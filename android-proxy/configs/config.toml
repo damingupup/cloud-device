@@ -1,0 +1,36 @@
+[Server]
+DebugMode = true
+HttpPort = "10003"
+RpcPort = "10004"
+#xcodebuild位置
+Xcode = "/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild"
+#wda目录
+WDAPath = ""
+AdbKitPath = ""
+Iproxy = "/usr/local/bin/iproxy"
+AdbPath = "/usr/local/bin/adb"
+Host = ""
+IsIos = false
+[Mysql]
+UserName = ""
+Password = "
+IpHost = ""
+#云测数据库
+DbName = "cloud"
+
+
+[Redis]
+IpHost = ""
+Db = 0
+#连接池大小
+PoolSize = 15
+#最小连接数
+MinIdleConns = 1
+#连接检查频率
+IdleCheckFrequency = 1
+
+[FileServer]
+Host = ""
+Port = ""
+VideoPath = ""
+LogPath = ""

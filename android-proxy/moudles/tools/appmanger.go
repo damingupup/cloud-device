@@ -29,7 +29,6 @@ func (am *APKManager) Install() error {
 		adb.Shell([]string{"rm", "-rf", name})
 	}()
 	adb.Push(am.Path, name)
-	fmt.Println(adb.Result())
 	adb.Shell([]string{"pm", "install", name})
 	result := strings.TrimSpace(adb.Result())
 	if !strings.Contains(result, "Success") {
@@ -48,16 +47,3 @@ type StartOptions struct {
 	Stop bool
 	Wait bool
 }
-
-//func (am *APKManager) Start(opts StartOptions) error {
-//
-//	if am.mainActivity == "" {
-//		return errors.New("parse MainActivity failed")
-//	}
-//	mainActivity := am.mainActivity
-//	if !strings.Contains(mainActivity, ".") {
-//		mainActivity = "." + mainActivity
-//	}
-//	_, err = runShellTimeout(30*time.Second, "am", "start", "-n", packageName+"/"+mainActivity)
-//	return err
-//}

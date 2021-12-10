@@ -12,6 +12,5 @@ const (
 	PingTime      = 15
 	LogMsgLength  = 500
 	ScrcpyPort    = "6612" // Scrcpy 启动端口
-	ServerKey     = "sk1"  //为了和征文logcat服务名字尽量保持一致
-
+	ServerKey     = "sk1"
 )

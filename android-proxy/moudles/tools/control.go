@@ -153,7 +153,6 @@ func drainScrcpyRequests(conn net.Conn, reqC chan Message, ctx context.Context) 
 				_, err = conn.Write(buf.Bytes())
 			case CONTROL_MSG_TYPE_BACK_OR_SCREEN_ON:
 			case CONTROL_MSG_TYPE_EXPAND_NOTIFICATION_PANEL:
-			case CONTROL_MSG_TYPE_COLLAPSE_NOTIFICATION_PANEL:
 			case CONTROL_MSG_TYPE_GET_CLIPBOARD:
 			case CONTROL_MSG_TYPE_SET_CLIPBOARD:
 			case CONTROL_MSG_TYPE_SET_SCREEN_POWER_MODE:

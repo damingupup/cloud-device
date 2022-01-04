@@ -13,23 +13,6 @@ func init() {
 	}
 }
 
-const (
-	WdaVideoPort     = "9100"
-	WdaControlPort   = "8100"
-	StatusSuccess    = 1 //wda启动成功
-	StatusWait       = 2 //wda启动等待
-	StatusError      = 3 //wda启动失败
-	StatusRestart    = 4 //wda重启
-	RespOk           = 0 //响应正常
-	RespBadRequest   = 1 //参数错误
-	RespUnauthorized = 2 //权限错误
-	RespServerError  = 3 //服务错误
-	PingTime         = 15
-	LogMsgLength     = 500
-	ServerKey        = "sk1" //为了和征文logcat服务名字尽量保持一致
-	LogState         = "0"   //为了和征文logcat服务名字尽量保持一致
-)
-
 var ConfigiOS *config
 
 type config struct {

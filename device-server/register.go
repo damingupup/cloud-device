@@ -12,7 +12,7 @@ import (
 )
 
 func registerRpc(server *grpc.Server) {
-	//pb.RegisterInstallAppServer(server, &controler.AppHandlerInstallRpc{})
+	pb.RegisterInstallAppServer(server, &controler.AppHandlerInstallRpc{})
 	pb.RegisterDeviceServiceServer(server, &controler.DeviceServer{})
 	reflection.Register(server)
 }

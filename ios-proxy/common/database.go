@@ -45,16 +45,3 @@ func MysqlDb() *gorm.DB {
 
 }
 
-//var RedisDb *redis.Client
-//
-//func init() {
-//	redisConfig := configs.ConfigiOS.Redis
-//	RedisDb = redis.NewClient(&redis.Options{
-//		Addr:               redisConfig.IpHost, // use default Addr
-//		Password:           "",                 // no password set
-//		DB:                 redisConfig.Db,     // use default DB
-//		PoolSize:           redisConfig.PoolSize,
-//		MinIdleConns:       redisConfig.MinIdleConns,
-//		IdleCheckFrequency: time.Duration(redisConfig.IdleCheckFrequency) * time.Second,
-//	})
-//}

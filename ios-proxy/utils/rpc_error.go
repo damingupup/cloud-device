@@ -7,7 +7,7 @@ package utils
 import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	pb "ctp-ios-proxy/proto/message"
+	pb "ios-proxy/proto/message"
 )
 
 func TogRPCError(err *Error) error {

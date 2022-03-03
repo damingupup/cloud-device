@@ -2,14 +2,14 @@ package main
 
 import (
 	"context"
-	"ctp-ios-proxy/common"
-	"ctp-ios-proxy/configs"
-	"ctp-ios-proxy/middleware"
-	"ctp-ios-proxy/utils"
 	"flag"
 	"fmt"
 	grpcMiddleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	"google.golang.org/grpc"
+	"ios-proxy/common"
+	"ios-proxy/configs"
+	"ios-proxy/middleware"
+	"ios-proxy/utils"
 	"math"
 	"net"
 	"os"

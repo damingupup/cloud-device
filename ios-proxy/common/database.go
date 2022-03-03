@@ -2,7 +2,7 @@ package common
 
 import (
 	"fmt"
-	"ctp-ios-proxy/configs"
+	"ios-proxy/configs"
 
 	//"github.com/go-redis/redis"
 	"gorm.io/driver/mysql"
@@ -11,10 +11,11 @@ import (
 )
 
 var sqlDB *gorm.DB
+
 func GetMysql() *gorm.DB {
 	return sqlDB
 }
-func InItMysql()  {
+func InItMysql() {
 	sqlDB = MysqlDb()
 }
 
@@ -44,4 +45,3 @@ func MysqlDb() *gorm.DB {
 	return sqlDB
 
 }
-

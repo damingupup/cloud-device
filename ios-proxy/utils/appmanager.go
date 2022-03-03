@@ -6,7 +6,7 @@ package utils
 
 import (
 	"bytes"
-	"ctp-ios-proxy/common"
+	"ios-proxy/common"
 	"os/exec"
 )
 

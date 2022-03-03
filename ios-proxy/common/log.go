@@ -15,15 +15,14 @@ func GetLog(uid string) *zap.Logger {
 	return Log
 }
 
-
 /*
 项目中使用的通用zap日志记录器，返回logger
 */
 func ZapLogger(uid string) *zap.Logger {
-	var  caller, development zap.Option
+	var caller, development zap.Option
 
 	// Option：基本日志选项
-	//appName = zap.Fields(zap.String("app", "ctp-ios-proxy"))
+	//appName = zap.Fields(zap.String("app", "ios-proxy"))
 	//version = zap.Fields(zap.String("version", "v0.1"))
 
 	// Option：注释每条信息所在文件名和行号
@@ -70,7 +69,7 @@ func getEncoder() zapcore.Encoder {
 */
 func getRotatelogsHook(uid string) io.Writer {
 	lumberJackLogger := &lumberjack.Logger{
-		Filename:   "./logs/"+uid+"/"+TimeStamp+".log",
+		Filename:   "./logs/" + uid + "/" + TimeStamp + ".log",
 		MaxSize:    10,
 		MaxBackups: 5,
 		MaxAge:     30,

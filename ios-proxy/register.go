@@ -7,8 +7,8 @@ package main
 import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-	"ctp-ios-proxy/controler"
-	pb "ctp-ios-proxy/proto"
+	"ios-proxy/controler"
+	pb "ios-proxy/proto"
 )
 
 func registerRpc(server *grpc.Server) {

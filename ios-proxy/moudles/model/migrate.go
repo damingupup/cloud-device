@@ -4,7 +4,7 @@
  */
 package model
 
-import "ctp-ios-proxy/common"
+import "ios-proxy/common"
 
 func Migrate() {
 	db := common.GetMysql()

@@ -12,11 +12,11 @@ import (
 	"github.com/hpcloud/tail"
 	"go.uber.org/zap"
 	"io/ioutil"
-	"ctp-ios-proxy/common"
-	"ctp-ios-proxy/configs"
-	"ctp-ios-proxy/moudles/model"
-	pb "ctp-ios-proxy/proto"
-	"ctp-ios-proxy/utils"
+	"ios-proxy/common"
+	"ios-proxy/configs"
+	"ios-proxy/moudles/model"
+	pb "ios-proxy/proto"
+	"ios-proxy/utils"
 	"net/http"
 	"os"
 	"path"
@@ -118,7 +118,7 @@ func (d *DeviceAgent) handCommand(stream pb.DeviceAgentService_ControlStreamServ
 	body := bytes.NewReader([]byte(command))
 	var resp *http.Response
 	var err error
-	if strings.Contains(url,"size"){
+	if strings.Contains(url, "size") {
 		resp, err = http.Get(url)
 		if err != nil {
 			common.Log.Error(err.Error())
@@ -128,7 +128,7 @@ func (d *DeviceAgent) handCommand(stream pb.DeviceAgentService_ControlStreamServ
 			}
 			return
 		}
-	}else {
+	} else {
 		resp, err = http.Post(url, "application/json", body)
 		if err != nil {
 			common.Log.Error(err.Error())

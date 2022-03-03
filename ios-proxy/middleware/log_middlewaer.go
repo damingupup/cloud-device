@@ -3,7 +3,7 @@ package middleware
 import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
-	"ctp-ios-proxy/common"
+	"ios-proxy/common"
 	"time"
 )
 
@@ -34,8 +34,8 @@ func LoggerToFile() gin.HandlerFunc {
 		clientIP := ctx.ClientIP()
 		common.Log.Info("", zap.Int("statusCode", statusCode),
 			zap.String("latencyTime", latencyTime.String()),
-			zap.String("clientIP",clientIP),
-			zap.String("reqMethod",reqMethod),
-			zap.String("reqUri",reqUri))
+			zap.String("clientIP", clientIP),
+			zap.String("reqMethod", reqMethod),
+			zap.String("reqUri", reqUri))
 	}
 }

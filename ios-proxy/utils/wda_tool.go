@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
-	"ctp-ios-proxy/common"
-	"ctp-ios-proxy/configs"
+	"ios-proxy/common"
+	"ios-proxy/configs"
 	"net/http"
 	"os/exec"
 	"runtime/debug"
@@ -155,8 +155,8 @@ func (w *WDA) startWda() {
 	//	time.Sleep(time.Second*2)
 	//
 	//}
-	args := []string{"-project", "WebDriverAgent.xcodeproj", "-scheme", "WebDriverAgentRunner", "-destination" ,"id="+w.Uid, "test"}
-	cmd := exec.Command(configs.ConfigiOS.Server.Xcode,args...)
+	args := []string{"-project", "WebDriverAgent.xcodeproj", "-scheme", "WebDriverAgentRunner", "-destination", "id=" + w.Uid, "test"}
+	cmd := exec.Command(configs.ConfigiOS.Server.Xcode, args...)
 	cmd.Dir = configs.ConfigiOS.Server.WDAPath
 	cmd.Start()
 	cmd1 := common.CmdUtil{

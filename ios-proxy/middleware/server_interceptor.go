@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"google.golang.org/grpc"
-	"ctp-ios-proxy/common"
-	"ctp-ios-proxy/utils"
+	"ios-proxy/common"
+	"ios-proxy/utils"
 	"time"
 )
 

@@ -5,7 +5,7 @@ import (
 	"context"
 	"github.com/astaxie/beego/httplib"
 	"go.uber.org/zap"
-	"ctp-ios-proxy/configs"
+	"ios-proxy/configs"
 	"net"
 	"os"
 	"os/exec"

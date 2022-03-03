@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"encoding/hex"
 	"github.com/DeanThompson/syncmap"
-	"ctp-ios-proxy/utils"
+	"ios-proxy/utils"
 	"path/filepath"
 )
 

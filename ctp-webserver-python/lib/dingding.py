@@ -23,6 +23,14 @@ class DingDingRoot(object):
         hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
         sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
         return sign, timestamp
+    def query(self):
+        sql = 'select br.deviceId,ttd.name,tu.email,tu.phone,br.borrowTime,ttd.borrow_status,tu.name as username,' \
+              'br.statusId from borrowing_record  br left join ' \
+              'tb_device ttd on br.deviceId = ttd.id left join tb_user tu on br.userId=tu.id where ' \
+              'br.isDelete=false and ttd.borrow_status !=0; '
+        num = self.cur.execute(sql)
+        resp = self.cur.fetchall()
+        return resp
 
     def send(self, msg):
         import logging
